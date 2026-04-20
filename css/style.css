@@ -28,6 +28,8 @@ main {
     position: relative;
     width: 100%;
     max-width: 320px;
+    transition: transform 0.3s ease;
+    transform-origin: center center;
 }
 
 .photo-card .card-body {
@@ -54,6 +56,7 @@ main {
     background-repeat: no-repeat;
     background-position: center;
     z-index: 2;
+    transition: opacity 0.2s ease;
 }
 
 .photo-date {
@@ -116,4 +119,14 @@ main {
 
 .close-btn:hover {
     color: #ccc;
+}
+
+/* ANIMAZIONE TILT DELLE CARD */
+.photo-card:hover {
+    transform: scale(1.1) rotate(10deg);
+    z-index: 10;
+}
+
+.photo-card:hover .pin {
+    opacity: 0;
 }
