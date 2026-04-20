@@ -70,3 +70,50 @@ main {
     font-size: 1.5rem;
     line-height: 1.2;
 }
+/* OVERLAY FULLSCREEN */
+.image-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Quando l'overlay è visibile */
+.image-overlay.active {
+    display: flex;
+}
+.image-overlay-content {
+    position: relative;
+    max-width: 50%;
+    max-height: 90%;
+}
+/* L'immagine grande */
+.overlay-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+.close-btn {
+    position: absolute;
+    top: -40px;
+    right: 0;
+
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #ccc;
+}
